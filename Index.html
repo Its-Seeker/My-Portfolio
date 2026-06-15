@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ketan Arora — Full Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="stars-canvas"></canvas>
+
+<nav>
+  <a href="#hero" class="nav-logo">Ketan<span>.dev</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <!-- LEFT: text -->
+  <div class="hero-left">
+    <p class="hero-eyebrow">// Full Stack Developer</p>
+    <h1 class="hero-name">
+      Ketan Arora
+      <span class="alias">alias: Seeker</span>
+    </h1>
+    <p class="hero-title">
+      Building intelligent web experiences from <span>frontend to backend</span> — turning raw ideas into data-driven products.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/Its-Seeker" target="_blank">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        GitHub
+      </a>
+      <span class="divider-v"></span>
+      <a href="https://www.linkedin.com/in/ketan-arora-028961325/" target="_blank">LinkedIn</a>
+      <span class="divider-v"></span>
+      <a href="https://www.reddit.com/user/U_seeker23/" target="_blank">Reddit</a>
+    </div>
+  </div>
+
+  <!-- RIGHT: floating island scene -->
+  <div class="hero-right">
+    <span class="hero-pill pill-1">⬢ React · Vite</span>
+    <span class="hero-pill pill-2">🚀 Open to work</span>
+    <span class="hero-pill pill-3">⬡ Node.js · Express</span>
+
+    <!-- BIG FLOATING ISLAND SVG -->
+    <svg id="island-scene" width="520" height="500" viewBox="0 0 520 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- ── GLOW AURA ── -->
+      <ellipse cx="260" cy="370" rx="180" ry="30" fill="rgba(124,58,237,0.18)"/>
+      <ellipse cx="260" cy="370" rx="120" ry="16" fill="rgba(232,121,249,0.12)"/>
+
+      <!-- ── ISLAND BASE (rocky floating chunk) ── -->
+      <!-- Main island body -->
+      <ellipse cx="260" cy="348" rx="155" ry="42" fill="#2a1f4a"/>
+      <ellipse cx="260" cy="342" rx="155" ry="38" fill="#1e1535"/>
+      <!-- Rocky underside stalactites -->
+      <path d="M130 348 Q145 375 138 390 Q132 378 125 370 Z" fill="#16102e"/>
+      <path d="M170 356 Q180 385 172 400 Q163 382 158 368 Z" fill="#16102e"/>
+      <path d="M215 362 Q222 392 215 408 Q205 390 200 374 Z" fill="#16102e"/>
+      <path d="M260 364 Q265 395 258 412 Q250 394 248 376 Z" fill="#16102e"/>
+      <path d="M305 362 Q312 390 306 406 Q296 388 292 372 Z" fill="#16102e"/>
+      <path d="M348 356 Q357 382 350 396 Q342 380 338 364 Z" fill="#16102e"/>
+      <path d="M385 346 Q395 370 388 384 Q380 370 376 356 Z" fill="#16102e"/>
+      <!-- Island top surface (grassy) -->
+      <ellipse cx="260" cy="318" rx="155" ry="34" fill="#1a1040"/>
+      <ellipse cx="260" cy="314" rx="148" ry="28" fill="#231550"/>
+      <!-- Grass layer on top -->
+      <ellipse cx="260" cy="308" rx="148" ry="22" fill="#1c3a2a"/>
+      <ellipse cx="260" cy="304" rx="140" ry="16" fill="#234d38"/>
+      <!-- Moss patches -->
+      <ellipse cx="160" cy="304" rx="28" ry="8" fill="#1c3a2a"/>
+      <ellipse cx="340" cy="308" rx="22" ry="6" fill="#1c3a2a"/>
+      <ellipse cx="220" cy="300" rx="18" ry="5" fill="#2a5040"/>
+      <!-- Floating rocks beneath -->
+      <ellipse cx="148" cy="368" rx="18" ry="9" fill="#1a1040" opacity="0.8"/>
+      <ellipse cx="376" cy="372" rx="14" ry="7" fill="#1a1040" opacity="0.7"/>
+      <ellipse cx="200" cy="395" rx="10" ry="5" fill="#1a1040" opacity="0.5"/>
+      <ellipse cx="330" cy="390" rx="8" ry="4" fill="#1a1040" opacity="0.5"/>
+
+      <!-- ── DESK ── -->
+      <rect x="155" y="262" width="210" height="14" rx="5" fill="#5a3060"/>
+      <rect x="155" y="274" width="210" height="6" rx="2" fill="#3d1f50"/>
+      <!-- Desk legs -->
+      <rect x="175" y="279" width="10" height="32" rx="3" fill="#3d1f50"/>
+      <rect x="335" y="279" width="10" height="32" rx="3" fill="#3d1f50"/>
+
+      <!-- ── MONITOR ── -->
+      <!-- Monitor stand -->
+      <rect x="245" y="228" width="12" height="36" rx="3" fill="#2a1a3e"/>
+      <rect x="232" y="260" width="38" height="6" rx="3" fill="#2a1a3e"/>
+      <!-- Monitor body -->
+      <rect x="162" y="140" width="198" height="122" rx="10" fill="#1a1030"/>
+      <rect x="168" y="146" width="186" height="106" rx="7" fill="#060410"/>
+      <!-- Terminal title bar -->
+      <rect x="168" y="146" width="186" height="18" rx="7" fill="#0d0920"/>
+      <rect x="168" y="157" width="186" height="7" fill="#0d0920"/>
+      <circle cx="179" cy="155" r="4" fill="#ff5f57"/>
+      <circle cx="191" cy="155" r="4" fill="#ffbd2e"/>
+      <circle cx="203" cy="155" r="4" fill="#28ca41"/>
+      <text x="261" y="158" font-family="monospace" font-size="6" fill="#546e7a" text-anchor="middle">seeker@portfolio — skills --all</text>
+
+      <!-- Line 1: prompt -->
+      <text x="172" y="173" font-family="monospace" font-size="5.8" fill="#28ca41">seeker@ketan:~$</text>
+      <text x="245" y="173" font-family="monospace" font-size="5.8" fill="#c8d0e0"> skills --all</text>
+
+      <!-- Languages -->
+      <text x="172" y="182" font-family="monospace" font-size="5.5" fill="#9f7aea">── Languages ──────────────</text>
+      <text x="175" y="191" font-family="monospace" font-size="5.5" fill="#e879f9">Python</text>
+      <text x="204" y="191" font-family="monospace" font-size="5.5" fill="#e879f9">C</text>
+      <text x="213" y="191" font-family="monospace" font-size="5.5" fill="#e879f9">C++</text>
+      <text x="227" y="191" font-family="monospace" font-size="5.5" fill="#e879f9">JavaScript</text>
+      <!-- <text x="271" y="191" font-family="monospace" font-size="5.5" fill="#e879f9">Java</text> -->
+
+      <!-- Frontend -->
+      <text x="172" y="200" font-family="monospace" font-size="5.5" fill="#38bdf8">── Frontend ──────────────</text>
+      <text x="175" y="209" font-family="monospace" font-size="5.5" fill="#82aaff">HTML</text>
+      <text x="197" y="209" font-family="monospace" font-size="5.5" fill="#82aaff">CSS</text>
+      <text x="213" y="209" font-family="monospace" font-size="5.5" fill="#82aaff">JavaScript</text>
+      <text x="255" y="209" font-family="monospace" font-size="5.5" fill="#82aaff">React</text>
+      <text x="278" y="209" font-family="monospace" font-size="5.5" fill="#82aaff">Vite</text>
+
+      <!-- Backend -->
+      <text x="172" y="218" font-family="monospace" font-size="5.5" fill="#4ade80">── Backend ───────────────</text>
+      <text x="175" y="227" font-family="monospace" font-size="5.5" fill="#c3e88d">Node.js</text>
+      <text x="204" y="227" font-family="monospace" font-size="5.5" fill="#c3e88d">Express</text>
+
+      <!-- DB -->
+      <text x="172" y="236" font-family="monospace" font-size="5.5" fill="#fb923c">── Database ──────────────</text>
+      <text x="175" y="245" font-family="monospace" font-size="5.5" fill="#ffbd2e">MongoDB</text>
+      <text x="210" y="245" font-family="monospace" font-size="5.5" fill="#ffbd2e">MySQL</text>
+
+      <!-- Tools -->
+      <text x="172" y="254" font-family="monospace" font-size="5.5" fill="#f472b6">── Tools ─────────────────</text>
+      <text x="175" y="263" font-family="monospace" font-size="5.5" fill="#f78c6c">Git</text>
+      <text x="191" y="263" font-family="monospace" font-size="5.5" fill="#f78c6c">GitHub</text>
+      <text x="218" y="263" font-family="monospace" font-size="5.5" fill="#f78c6c">VS Code</text>
+
+      <!-- Prompt line with blinking cursor -->
+      <text x="172" y="272" font-family="monospace" font-size="5.8" fill="#28ca41">seeker@ketan:~$</text>
+      <rect x="245" y="265" width="5" height="9" rx="1" fill="#28ca41">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Monitor green glow border -->
+      <rect x="162" y="140" width="198" height="122" rx="10" fill="none" stroke="#28ca41" stroke-width="0.8" opacity="0.4"/>
+
+      <!-- ── KEYBOARD ── -->
+      <rect x="195" y="278" width="130" height="18" rx="4" fill="#1e1535"/>
+      <rect x="200" y="281" width="120" height="3" rx="1" fill="#2d2050"/>
+      <rect x="200" y="287" width="120" height="3" rx="1" fill="#2d2050"/>
+      <rect x="208" y="293" width="98" height="3" rx="1" fill="#2d2050"/>
+      <!-- Mouse -->
+      <rect x="338" y="278" width="20" height="26" rx="6" fill="#1e1535"/>
+      <line x1="348" y1="278" x2="348" y2="290" stroke="#2d2050" stroke-width="1.5"/>
+
+      <!-- ── COFFEE MUG ── -->
+      <rect x="352" y="250" width="24" height="26" rx="5" fill="#2a1a3e"/>
+      <rect x="354" y="252" width="20" height="20" rx="4" fill="#3d2a50"/>
+      <path d="M376 258 Q384 258 384 265 Q384 272 376 272" stroke="#2a1a3e" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <!-- Steam -->
+      <path d="M359 248 Q362 242 359 236" stroke="#9f7aea" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M365 246 Q368 240 365 234" stroke="#9f7aea" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.7s" repeatCount="indefinite"/>
+      </path>
+      <path d="M371 248 Q374 242 371 236" stroke="#9f7aea" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2.3s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- ── PLANTS ── -->
+      <!-- Left plant -->
+      <rect x="124" y="274" width="14" height="22" rx="3" fill="#2a1a3e"/>
+      <ellipse cx="131" cy="264" rx="16" ry="20" fill="#1c3a2a"/>
+      <ellipse cx="120" cy="270" rx="10" ry="14" fill="#234d38"/>
+      <ellipse cx="142" cy="268" rx="10" ry="14" fill="#234d38"/>
+      <!-- Right plant (small) -->
+      <rect x="380" y="280" width="10" height="18" rx="2" fill="#2a1a3e"/>
+      <ellipse cx="385" cy="272" rx="12" ry="14" fill="#1c3a2a"/>
+      <ellipse cx="376" cy="276" rx="8" ry="10" fill="#234d38"/>
+
+      <!-- ── BOOKSHELF (back) ── -->
+      <rect x="118" y="220" width="36" height="44" rx="3" fill="#1a1030"/>
+      <rect x="120" y="222" width="6" height="38" rx="2" fill="#9f7aea" opacity="0.8"/>
+      <rect x="128" y="226" width="5" height="34" rx="2" fill="#e879f9" opacity="0.8"/>
+      <rect x="135" y="224" width="7" height="36" rx="2" fill="#38bdf8" opacity="0.8"/>
+      <rect x="144" y="228" width="5" height="32" rx="2" fill="#c3e88d" opacity="0.8"/>
+      <rect x="118" y="218" width="36" height="5" rx="2" fill="#2a1a3e"/>
+
+      <!-- ── FLOATING TERMINAL LEFT: Languages + Frontend ── -->
+      <g transform="translate(30, 118)" opacity="0.92">
+        <rect width="136" height="104" rx="8" fill="#060410" stroke="#9f7aea" stroke-width="1"/>
+        <!-- title bar -->
+        <rect width="136" height="18" rx="8" fill="#120d28"/>
+        <rect y="10" width="136" height="8" fill="#120d28"/>
+        <circle cx="10" cy="9" r="3.5" fill="#ff5f57"/>
+        <circle cx="21" cy="9" r="3.5" fill="#ffbd2e"/>
+        <circle cx="32" cy="9" r="3.5" fill="#28ca41"/>
+        <text x="68" y="13" font-family="monospace" font-size="5.5" fill="#546e7a" text-anchor="middle">terminal</text>
+        <!-- prompt -->
+        <text x="8" y="28" font-family="monospace" font-size="5.2" fill="#28ca41">$</text>
+        <text x="14" y="28" font-family="monospace" font-size="5.2" fill="#e2e8f0"> cat languages.sh</text>
+        <!-- Languages section -->
+        <text x="8" y="38" font-family="monospace" font-size="5" fill="#9f7aea">▸ Languages:</text>
+        <text x="12" y="47" font-family="monospace" font-size="5" fill="#e879f9">Python  </text>
+        <text x="42" y="47" font-family="monospace" font-size="5" fill="#e879f9">C  </text>
+        <text x="52" y="47" font-family="monospace" font-size="5" fill="#e879f9">C++  </text>
+        <text x="68" y="47" font-family="monospace" font-size="5" fill="#e879f9">JS  </text>
+        <!-- <text x="80" y="47" font-family="monospace" font-size="5" fill="#e879f9">Java</text> -->
+        <!-- Frontend section -->
+        <text x="8" y="58" font-family="monospace" font-size="5" fill="#38bdf8">▸ Frontend:</text>
+        <text x="12" y="67" font-family="monospace" font-size="5" fill="#82aaff">HTML  CSS  JS</text>
+        <text x="12" y="76" font-family="monospace" font-size="5" fill="#82aaff">React  Vite</text>
+        <!-- prompt again -->
+        <text x="8" y="88" font-family="monospace" font-size="5.2" fill="#28ca41">$</text>
+        <rect x="14" y="82" width="5" height="8" rx="1" fill="#9f7aea">
+          <animate attributeName="opacity" values="1;0;1" dur="1.3s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- ── FLOATING TERMINAL RIGHT: Backend + DB + Tools ── -->
+      <g transform="translate(352, 90)" opacity="0.90">
+        <rect width="138" height="100" rx="8" fill="#060410" stroke="#e879f9" stroke-width="1"/>
+        <!-- title bar -->
+        <rect width="138" height="18" rx="8" fill="#120d28"/>
+        <rect y="10" width="138" height="8" fill="#120d28"/>
+        <circle cx="10" cy="9" r="3.5" fill="#ff5f57"/>
+        <circle cx="21" cy="9" r="3.5" fill="#ffbd2e"/>
+        <circle cx="32" cy="9" r="3.5" fill="#28ca41"/>
+        <text x="69" y="13" font-family="monospace" font-size="5.5" fill="#546e7a" text-anchor="middle">terminal</text>
+        <!-- prompt -->
+        <text x="8" y="28" font-family="monospace" font-size="5.2" fill="#28ca41">$</text>
+        <text x="14" y="28" font-family="monospace" font-size="5.2" fill="#e2e8f0"> cat stack.sh</text>
+        <!-- Backend -->
+        <text x="8" y="38" font-family="monospace" font-size="5" fill="#4ade80">▸ Backend:</text>
+        <text x="12" y="47" font-family="monospace" font-size="5" fill="#c3e88d">Node.js  Express</text>
+        <!-- DB -->
+        <text x="8" y="57" font-family="monospace" font-size="5" fill="#fb923c">▸ Database:</text>
+        <text x="12" y="66" font-family="monospace" font-size="5" fill="#ffbd2e">MongoDB  MySQL</text>
+        <!-- Tools -->
+        <text x="8" y="76" font-family="monospace" font-size="5" fill="#f472b6">▸ Tools:</text>
+        <text x="12" y="85" font-family="monospace" font-size="5" fill="#f78c6c">Git  GitHub</text>
+        <text x="12" y="94" font-family="monospace" font-size="5" fill="#f78c6c">VS Code</text>
+      </g>
+
+      <!-- ── AMBIENT PARTICLES ── -->
+      <circle cx="80" cy="180" r="3" fill="#9f7aea" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,-8;0,0" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="440" cy="220" r="2.5" fill="#e879f9" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.8s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="460" cy="150" r="2" fill="#38bdf8" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,-10;0,0" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="60" cy="280" r="2" fill="#c3e88d" opacity="0.45">
+        <animate attributeName="opacity" values="0.45;0.9;0.45" dur="3s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,-7;0,0" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="390" cy="320" r="1.8" fill="#ffbd2e" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2.2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="150" cy="100" r="2.2" fill="#9f7aea" opacity="0.35">
+        <animate attributeName="opacity" values="0.35;0.75;0.35" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="max-width:1200px; margin:0 auto;">
+  <div class="reveal">
+    <p class="section-label">01 · About Me</p>
+    <h2 class="section-title">Who is <span>Seeker</span>?</h2>
+    <div class="divider"></div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm <strong>Ketan Arora</strong>, a full stack developer who goes by <strong>Seeker</strong> — because I'm always chasing the next interesting problem. I love building things that are actually useful, not just functional.</p>
+        <p>My current big project is <strong>FutureSeat</strong>, an intelligent platform that transforms scattered college admission cutoff data into clear, actionable insights for engineering students. Think data science meets real-world impact.</p>
+        <p>I work across the stack — from crafting clean React UIs and managing data with MongoDB and MySQL, to building backend logic with Node.js and Express. I'm currently pursuing my B.Tech in CSE and focused on mastering my skills through real-world projects.</p>
+        <div class="stat-row">
+          <div class="stat">
+            <span class="stat-num">2</span>
+            <span class="stat-label">Projects shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Languages</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">∞</span>
+            <span class="stat-label">Curiosity</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-info">
+        <div class="info-card">
+          <div class="info-icon">🎓</div>
+          <div>
+            <h4>Education</h4>
+            <p>Currently pursuing B.Tech in Computer Science Engineering (CSE).</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">⚡</div>
+          <div>
+            <h4>Current Focus</h4>
+            <p>Mastering all my skills and building real-world projects.</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🔍</div>
+          <div>
+            <h4>The Seeker Mindset</h4>
+            <p>Always exploring new technologies, solving real problems, and building tools that actually make a difference.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="max-width:1200px; margin:0 auto;">
+  <div class="reveal">
+    <p class="section-label">02 · Skills</p>
+    <h2 class="section-title">My <span>Skill Planets</span></h2>
+    <div class="divider"></div>
+    <div class="skills-grid">
+      <div class="planet-card" style="--planet-color: #9f7aea;">
+        <h3>🌐 Languages</h3>
+        <div>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">C</span>
+          <span class="skill-tag">C++</span>
+          <span class="skill-tag">JavaScript</span>
+          <!-- <span class="skill-tag">Java</span> -->
+        </div>
+      </div>
+      <div class="planet-card" style="--planet-color: #38bdf8;">
+        <h3>🖥 Frontend</h3>
+        <div>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Vite</span>
+        </div>
+      </div>
+      <div class="planet-card" style="--planet-color: #4ade80;">
+        <h3>⚙️ Backend</h3>
+        <div>
+          <span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express</span>
+        </div>
+      </div>
+      <div class="planet-card" style="--planet-color: #fb923c;">
+        <h3>🗄 Database</h3>
+        <div>
+          <span class="skill-tag">MongoDB</span>
+          <span class="skill-tag">MySQL</span>
+        </div>
+      </div>
+      <div class="planet-card" style="--planet-color: #e879f9; grid-column: 1 / -1;">
+        <h3>🛠 Tools</h3>
+        <div>
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">VS Code</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" style="max-width:1200px; margin:0 auto;">
+  <div class="reveal">
+    <p class="section-label">03 · Projects</p>
+    <h2 class="section-title">Things I've <span>Built</span></h2>
+    <div class="divider"></div>
+    <div class="projects-grid">
+
+      <!-- FutureSeat — Large -->
+      <div class="project-card large">
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <span class="project-tag tag-large">Flagship Project</span>
+            <h3 style="margin-top:0.8rem;">FutureSeat</h3>
+            <p style="color: var(--accent2); font-size:0.85rem; margin-top:0.2rem; font-family:'Space Mono',monospace;">Smart College Admission Strategy Platform</p>
+          </div>
+          <div style="font-size:3rem; opacity:0.6;">🎓</div>
+        </div>
+        <p>During engineering admission counseling, students face scattered cutoff data and no clear strategy. FutureSeat transforms raw historical admission data into structured, interactive insights — helping students identify safe, target, and ambitious colleges based on their rank.</p>
+        <p>Features include cutoff trend visualization across years, college comparison tools, and a smart strategy planner for counseling rounds. <strong style="color:var(--accent);">My role:</strong> <span style="color:var(--muted);">Frontend development — built the entire React (Vite) UI, CSS styling, and chart visualizations.</span></p>
+        <div class="tech-stack">
+          <span class="tech">React</span>
+          <span class="tech">Vite</span>
+          <span class="tech">CSS</span>
+          <span class="tech">Chart.js</span>
+          <span class="tech">Python</span>
+          <span class="tech">FastAPI</span>
+          <span class="tech">Scikit-learn</span>
+          <span class="tech">PostgreSQL</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:4px;">
+          <span style="font-size:0.72rem;padding:3px 10px;border-radius:50px;background:rgba(56,189,248,0.1);color:var(--accent3);border:1px solid rgba(56,189,248,0.2);font-family:'Space Mono',monospace;">Group Project</span>
+          <span style="font-size:0.72rem;color:var(--muted);font-family:'Space Mono',monospace;">My contribution: Frontend</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Its-Seeker/FutureSeat" target="_blank">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <!-- Tic Tac Toe -->
+      <div class="project-card">
+        <span class="project-tag tag-small">Mini Project</span>
+        <h3 style="margin-top:0.8rem;">Tic Tac Toe</h3>
+        <p>A classic Tic Tac Toe game built with pure JavaScript — clean logic, interactive UI, win detection, and a reset flow. Simple but a solid demonstration of DOM manipulation and game state management.</p>
+        <div class="tech-stack">
+          <span class="tech">JavaScript</span>
+          <span class="tech">HTML</span>
+          <span class="tech">CSS</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/Its-Seeker/Tic-Tac-Toe" target="_blank">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+
+      <!-- Coming Soon -->
+      <div class="project-card" style="justify-content:center; align-items:center; text-align:center; opacity:0.5; border-style: dashed;">
+        <div style="font-size:2rem; margin-bottom:0.8rem;">+</div>
+        <h3 style="font-size:1rem; font-weight:500;">Next Project Loading...</h3>
+        <p style="font-size:0.85rem; margin-top:0.5rem;">The Seeker never stops building.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="max-width:1200px; margin:0 auto;">
+  <div class="reveal">
+    <p class="section-label">04 · Contact</p>
+    <h2 class="section-title">Let's <span>Connect</span></h2>
+    <div class="divider"></div>
+    <div class="contact-inner">
+      <div class="contact-text">
+        <p>I'm always open to interesting conversations, collaborations, and new opportunities. Whether it's a project idea, a question, or just a chat — reach out.</p>
+        <div class="contact-links">
+          <a href="mailto:ketanarora482@gmail.com" class="contact-link">
+            <div class="info-icon" style="background:rgba(159,122,234,0.1);">📧</div>
+            <div>
+              <div>ketanarora482@gmail.com</div>
+              <div class="link-label">Email</div>
+            </div>
+          </a>
+          <a href="https://github.com/Its-Seeker" target="_blank" class="contact-link">
+            <div class="info-icon" style="background:rgba(56,189,248,0.1);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent3)"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </div>
+            <div>
+              <div>Its-Seeker</div>
+              <div class="link-label">GitHub</div>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/ketan-arora-028961325/" target="_blank" class="contact-link">
+            <div class="info-icon" style="background:rgba(232,121,249,0.1);">💼</div>
+            <div>
+              <div>Ketan Arora</div>
+              <div class="link-label">LinkedIn</div>
+            </div>
+          </a>
+          <a href="https://www.reddit.com/user/U_seeker23/" target="_blank" class="contact-link">
+            <div class="info-icon" style="background:rgba(251,146,60,0.1);">🔴</div>
+            <div>
+              <div>U_seeker23</div>
+              <div class="link-label">Reddit</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-bar">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span style="font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--muted);margin-left:8px;">terminal — contact</span>
+        </div>
+        <div class="terminal-body">
+          <div><span class="t-prompt">seeker@portfolio</span> <span class="t-cmd">whoami</span></div>
+          <div class="t-out">→ Full Stack Developer, problem solver, builder</div>
+          <br>
+          <div><span class="t-prompt">seeker@portfolio</span> <span class="t-cmd">cat contact.json</span></div>
+          <div>{</div>
+          <div>&nbsp;&nbsp;"name": <span class="t-val">"Ketan Arora"</span>,</div>
+          <div>&nbsp;&nbsp;"alias": <span class="t-val">"Seeker"</span>,</div>
+          <div>&nbsp;&nbsp;"email": <span class="t-val">"ketanarora482@gmail.com"</span>,</div>
+          <div>&nbsp;&nbsp;"open_to": <span class="t-val">"opportunities"</span>,</div>
+          <div>&nbsp;&nbsp;"status": <span class="t-val">"actively building"</span></div>
+          <div>}</div>
+          <br>
+          <div><span class="t-prompt">seeker@portfolio</span> <span class="t-cursor"></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span>© 2026 Ketan Arora · <a href="https://github.com/Its-Seeker" target="_blank">Its-Seeker</a></span>
+  <span style="color:var(--accent);font-family:'Space Mono',monospace;font-size:0.8rem;">Built with curiosity & caffeine ☕</span>
+  <div class="social-row">
+    <a href="https://github.com/Its-Seeker" target="_blank" title="GitHub">GH</a>
+    <a href="https://www.linkedin.com/in/ketan-arora-028961325/" target="_blank" title="LinkedIn">LI</a>
+    <a href="https://www.reddit.com/user/U_seeker23/" target="_blank" title="Reddit">RD</a>
+    <a href="mailto:ketanarora482@gmail.com" title="Email">EM</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
