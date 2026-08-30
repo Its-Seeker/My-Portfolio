@@ -306,3 +306,26 @@ document.getElementById('lightbox-close').addEventListener('click', closeLightbo
 document.getElementById('lightbox').addEventListener('click', (e) => {
   if(e.target.id === 'lightbox') closeLightbox();
 });
+
+// Procedurally generate rain drops as SVG lines inside the .rain group.
+// Kept in JS (rather than hand-authored markup) so density/speed is easy to tune.
+(function generateRain(){
+  const svgNS = "http://www.w3.org/2000/svg";
+  const rainGroup = document.querySelector(".rain");
+  if (!rainGroup) return;
+  const dropCount = 110;
+  for (let i = 0; i < dropCount; i++) {
+    const x = Math.random() * 1600;
+    const len = 18 + Math.random() * 22;
+    const delay = Math.random() * 2.4;
+    const duration = 0.7 + Math.random() * 0.6;
+    const line = document.createElementNS(svgNS, "line");
+    line.setAttribute("x1", x);
+    line.setAttribute("y1", -60);
+    line.setAttribute("x2", x - 8);
+    line.setAttribute("y2", -60 + len);
+    line.style.animationDelay = delay + "s";
+    line.style.animationDuration = duration + "s";
+    rainGroup.appendChild(line);
+  }
+})();
