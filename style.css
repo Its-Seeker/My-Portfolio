@@ -55,6 +55,7 @@
   .hill-far{fill:#0f2530;filter:blur(3px);}
   .hill-near{fill:#050b0e;}
   .tree{fill:#030608;}
+  .dead-tree{fill:none;stroke:#030608;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;opacity:0.92;}
   .moon{fill:var(--moon);}
   .moon-glow{fill:url(#moonGlow);}
   .crater{fill:#d8d4c4;opacity:0.35;}
@@ -75,6 +76,14 @@
   .wing{transform-origin:2px 2px;}
   .wing-l{animation:flapL 0.8s ease-in-out infinite alternate;}
   .wing-r{animation:flapR 0.8s ease-in-out infinite alternate;}
+  .rain{pointer-events:none;}
+  .rain line{stroke:#bcd6de;stroke-width:1.4;stroke-linecap:round;opacity:0.32;animation-name:rainFall;animation-timing-function:linear;animation-iteration-count:infinite;}
+  @keyframes rainFall{
+    0%{transform:translateY(-60px);opacity:0;}
+    10%{opacity:0.35;}
+    90%{opacity:0.35;}
+    100%{transform:translateY(960px);opacity:0;}
+  }
   @keyframes fly{
     0%{  transform:translate(-12vw,30vh) scale(0.45) rotate(-2deg);}
     20%{ transform:translate(20vw,20vh) scale(0.55) rotate(2deg);}
@@ -85,7 +94,7 @@
   @keyframes flapL{0%{transform:rotate(-8deg);}100%{transform:rotate(22deg);}}
   @keyframes flapR{0%{transform:rotate(8deg);}100%{transform:rotate(-22deg);}}
   @media (prefers-reduced-motion: reduce){
-    .bird,.wing-l,.wing-r,.fog-drift,.stars circle,.castle-window,.cloud-pass{animation:none !important;}
+    .bird,.wing-l,.wing-r,.fog-drift,.stars circle,.castle-window,.cloud-pass,.rain line{animation:none !important;}
   }
   #hero{
     position:absolute;top:36%;left:50%;transform:translate(-50%,-50%);
